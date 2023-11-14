@@ -10,7 +10,7 @@ The challenge did not include training data, so part of the challenge was to gen
 ## My Approach
 As the questions in this competition are LLM generated based on Wikipedia articles, retrival augmented generation (RAG) is a shortcut to answering them. Find the article the questions is based on and use it as context for the model answering the question. 
 
-I've decided to use [ColBERT](https://github.com/stanford-futuredata/ColBERT) for as retriever. ColBERT creates a seperate embedding vector for each word in a sentence, thus being able to retain a lot of sematic structure. ColBERT matches a query to a document via a MaxSim based operator by matching each token from the query to the token in a document that has the highest cosine similarty in the embedding space to the query token and suming this over all query tokens.
+I've decided to use [ColBERT](https://github.com/stanford-futuredata/ColBERT) for the retrieval. ColBERT creates a seperate embedding vector for each word in a sentence, thus being able to retain a lot of sematic structure. ColBERT matches a query to a document via a MaxSim based operator by matching each token from the query to the token in a document that has the highest cosine similarty in the embedding space to the query token and suming this over all query tokens.
 
 ColBERT creates relatively large embeddings with the advantage of perserving sematics well. This backfired during the competition, as it was quite hard to make the retrival from the large ColBERT index work in the limited Kaggle submission environment.
 
