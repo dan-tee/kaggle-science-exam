@@ -1,4 +1,5 @@
-# kaggle-science-exam [link](https://www.kaggle.com/competitions/kaggle-llm-science-exam)
+# kaggle-science-exam 
+[link to competiotnon on Kaggle](https://www.kaggle.com/competitions/kaggle-llm-science-exam)
 
 ## Challenge
 > Inspired by the OpenBookQA dataset, this competition challenges participants to answer difficult science-based questions written by a Large Language Model. ... Right now we estimate that the largest models run on Kaggle are around 10 billion parameters, whereas gpt3.5 clocks in at 175 billion parameters. If a question-answering model can ace a test written by a question-writing model more than 10 times its size, this would be a genuinely interesting result.
