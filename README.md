@@ -14,7 +14,7 @@ I've decided to use [ColBERT](https://github.com/stanford-futuredata/ColBERT) fo
 
 ColBERT creates relatively large embeddings with the advantage of perserving sematics well. This backfired during the competition, as it was quite hard to make the retrival from the large ColBERT index work in the limited Kaggle submission environment.
 
-I've been using two approaches for the ColBERT search. Once I used a question-answer pair as query against all Science articles in Wikipida as documents, I secondly just the question against the articles. Both top matches would then be added as context to the question answer pairs to be fed into the downstream model.
+I've been using two approaches for the ColBERT search. First I used question-answer pairs as query and the science articles in Wikipida as documents. Second I used only the question to match with the articles. Both top matches would then be added as context to the question answer pairs to be fed into the downstream model.
 
 As downstream model I used a DeBERTa V3 and trained it on a binary classifiation task for indidual question-answer pairs. I've created synthetic questions via the GPT-3.5 API and used some of the synthetic questions other users had uploaded as Kaggle Datasets.
 
